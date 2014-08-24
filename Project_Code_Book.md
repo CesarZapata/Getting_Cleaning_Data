@@ -13,7 +13,7 @@ walkingdownstairs
 
 Labeling: The R script labels the data set with descriptive names and it merges the data frame containing features with 10299x1 data frames containing activity labels and subject IDs. The result is saved as merged_clean_data.txt. The first column contains subject IDs, the second column activity names, and the last Columns are measurements.
 
-Tidy Data set: At the end, the script creates a 2nd, independent tidy data set with the average of each measurement for each activity and each subject. The result is saved as data_set_with_the_averages.txt. 
+Tidy Data set: At the end, the script creates a 2nd, independent tidy data set with the average of each measurement for each activity and each subject. The result is saved as tidy_data.txt. 
 
 Columns:
 - subject IDs
