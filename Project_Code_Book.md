@@ -1,9 +1,15 @@
-The R script named "run_analysis.R" will perform the following actions in order to clean the data and obtain a tidy data set:
 
-Data Merging: Combination of the training set and the test set in one single data set, namely train/X_train.txt with test/X_test.txt, the result of which is a data frame with activity IDs.
-The R script reads features.txt and extracts only the measurements on the mean and standard deviation for each measurement.
-It also reads activity_labels.txt and applies descriptive activity names to name the activities in the data set:
 
+Source Data Sets: 
+train/X_train.txt 
+test/X_test.txt
+activity_labels.txt
+
+Processed Data Sets:
+merged_data.txt
+tidy_data.txt = goal of the project
+
+Activities:
 sitting
 standing
 laying
@@ -11,16 +17,81 @@ walking
 walkingupstairs
 walkingdownstairs
 
-Labeling: The R script labels the data set with descriptive names and it merges the data frame containing features with 10299x1 data frames containing activity labels and subject IDs. The result is saved as merged_clean_data.txt. The first column contains subject IDs, the second column activity names, and the last Columns are measurements.
-
-Tidy Data set: At the end, the script creates a 2nd, independent tidy data set with the average of each measurement for each activity and each subject. The result is saved as tidy_data.txt. 
-
 Columns:
 - subject IDs
 - activity names
 - averages for each of the attributes.
 There are 30 subjects and 6 activities.
-We will get 180 rows in this data set with averages.
+
+filename: tidy_data.txt
+data.frame:	180 obs of 68 variables:
+
+tbodyacc.mean.x	
+tbodyacc.mean.y	
+tbodyacc.mean.z	
+tbodyacc.std.x	
+tbodyacc.std.y	
+tbodyacc.std.z	
+tgravityacc.mean.x	
+tgravityacc.mean.y	
+tgravityacc.mean.z	
+tgravityacc.std.x	
+tgravityacc.std.y	
+tgravityacc.std.z	
+tbodyaccjerk.mean.x	
+tbodyaccjerk.mean.y	
+tbodyaccjerk.mean.z	
+tbodyaccjerk.std.x	
+tbodyaccjerk.std.y	
+tbodyaccjerk.std.z	
+tbodygyro.mean.x	
+tbodygyro.mean.y	
+tbodygyro.mean.z	
+tbodygyro.std.x	
+tbodygyro.std.y	
+tbodygyro.std.z	
+tbodygyrojerk.mean.x	
+tbodygyrojerk.mean.y	
+tbodygyrojerk.mean.z	
+tbodygyrojerk.std.x	
+tbodygyrojerk.std.y	
+tbodygyrojerk.std.z	
+tbodyaccmag.mean	
+tbodyaccmag.std	
+tgravityaccmag.mean	
+tgravityaccmag.std	
+tbodyaccjerkmag.mean	
+tbodyaccjerkmag.std	
+tbodygyromag.mean	
+tbodygyromag.std	
+tbodygyrojerkmag.mean	
+tbodygyrojerkmag.std	
+fbodyacc.mean.x	
+fbodyacc.mean.y	
+fbodyacc.mean.z	
+fbodyacc.std.x	
+fbodyacc.std.y	
+fbodyacc.std.z	
+fbodyaccjerk.mean.x	
+fbodyaccjerk.mean.y	
+fbodyaccjerk.mean.z	
+fbodyaccjerk.std.x	
+fbodyaccjerk.std.y	
+fbodyaccjerk.std.z	
+fbodygyro.mean.x	
+fbodygyro.mean.y	
+fbodygyro.mean.z	
+fbodygyro.std.x	
+fbodygyro.std.y	
+fbodygyro.std.z	
+fbodyaccmag.mean	
+fbodyaccmag.std	
+fbodybodyaccjerkmag.mean	
+fbodybodyaccjerkmag.std	
+fbodybodygyromag.mean	
+fbodybodygyromag.std	
+fbodybodygyrojerkmag.mean:	
+fbodybodygyrojerkmag.std	
 
 Source of the original data: https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip
 
